@@ -9,13 +9,13 @@ import random
 while True:
     try:
         N = int(input("Number of simulations to run: "))
-    except ValueError:
-        print("Number is not valid!")
-    else:
         if N > 0 and N < 1000001:
             break
         elif N > 1000000:
             print("Number too big!")
+    except ValueError:
+        print("Number is not valid!")
+
 
 
 def main():
