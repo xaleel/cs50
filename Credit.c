@@ -11,10 +11,8 @@ int main(void)
 //I'm not sure if this is the most efficient way to extract each digit.
 
 int p = card % 10;
-
 int o = card / 10 % 10 ;
-
-int n=card / 100 % 10;
+int n = card / 100 % 10;
 int m = card / 1000 % 10;
 int l = card / 10000 % 10;
 int k = card / 100000 % 10;
@@ -30,6 +28,7 @@ int b = card / 100000000000000 % 10;
 int a = card / 1000000000000000 % 10;
 
 
+ //Luhn algorithm
 int sum1 = a/5+a*2%10 + c/5+c*2%10 + e/5+e*2%10 + g/5+g*2%10 + i/5+i*2%10 + k/5+k*2%10 + m/5+m*2%10 + o/5+o*2%10;
 int sum2 = b+d+f+h+j+l+n+p;
 int sum = sum1 + sum2;
